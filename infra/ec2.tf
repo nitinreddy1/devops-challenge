@@ -20,7 +20,7 @@ resource "aws_instance" "web_host" {
                 sudo apt install git docker-ce -y
                 sudo usermod -aG docker ubuntu
                 newgrp docker
-                git clone 
+                git clone https://github.com/nitinreddy1/devops-challenge.git
                 cd devops-challenge/webapp
                 docker build -t webapp:latest .
                 docker run -p 80:80 -d webapp:latest
